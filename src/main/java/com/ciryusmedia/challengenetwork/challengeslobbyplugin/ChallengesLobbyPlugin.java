@@ -4,6 +4,7 @@ import com.ciryusmedia.challengenetwork.challengeslobbyplugin.interfaces.Debugle
 
 import com.ciryusmedia.challengenetwork.challengeslobbyplugin.interfaces.Texts;
 import com.ciryusmedia.challengenetwork.challengeslobbyplugin.listeners.system.PlayerJoinLeaveListener;
+import com.ciryusmedia.challengenetwork.challengeslobbyplugin.listeners.system.PlayerListener;
 import com.ciryusmedia.challengenetwork.challengeslobbyplugin.scoreboard.TablistManager;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -29,7 +30,7 @@ public final class ChallengesLobbyPlugin extends JavaPlugin {
         // Plugin startup logic
         log("Enabling Ciryus Challenge Plugin version " + getDescription().getVersion(), Debuglevel.LEVEL_0);
 
-        getServer().getPluginManager().registerEvents(new PlayerJoinLeaveListener(), this);
+        getServer().getPluginManager().registerEvents(new PlayerListener(), this);
         getServer().getPluginManager().registerEvents(new PlayerJoinLeaveListener(), this);
 
         tablistManager = new TablistManager();
