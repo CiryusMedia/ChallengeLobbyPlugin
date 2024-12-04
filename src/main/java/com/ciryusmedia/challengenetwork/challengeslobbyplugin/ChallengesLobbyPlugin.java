@@ -30,6 +30,7 @@ public final class ChallengesLobbyPlugin extends JavaPlugin {
         log("Enabling Ciryus Challenge Plugin version " + getDescription().getVersion(), Debuglevel.LEVEL_0);
 
         getServer().getPluginManager().registerEvents(new PlayerJoinLeaveListener(), this);
+        getServer().getPluginManager().registerEvents(new PlayerJoinLeaveListener(), this);
 
         tablistManager = new TablistManager();
 
