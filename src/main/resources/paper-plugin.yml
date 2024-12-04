@@ -1,6 +1,6 @@
 name: ChallengesLobbyPlugin
 version: '0.1.0'
-main: com.ciryusmedia.challengesLobbyPlugin.ChallengesLobbyPlugin
+main: com.ciryusmedia.challengenetwork.challengesLobbyPlugin.ChallengesLobbyPlugin
 api-version: '1.21'
 load: STARTUP
 authors: [ CiryusMedia ]
