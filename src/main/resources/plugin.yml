@@ -1,0 +1,17 @@
+name: ChallengesLobbyPlugin
+version: '0.1.0'
+main: com.ciryusmedia.challengenetwork.challengeslobbyplugin.ChallengesLobbyPlugin
+api-version: '1.21'
+load: STARTUP
+authors: [ CiryusMedia ]
+
+commands:
+
+  spawn:
+    description: Teleports the player to the spawn or sets the spawn
+
+permissions:
+
+  ccnlobby.spawn.set:
+    description: Allows someone to set the spawnpoint
+    default: op

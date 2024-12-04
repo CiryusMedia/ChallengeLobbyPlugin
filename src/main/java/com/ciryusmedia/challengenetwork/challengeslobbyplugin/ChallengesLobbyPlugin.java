@@ -1,5 +1,6 @@
 package com.ciryusmedia.challengenetwork.challengeslobbyplugin;
 
+import com.ciryusmedia.challengenetwork.challengeslobbyplugin.commands.SpawnCommand;
 import com.ciryusmedia.challengenetwork.challengeslobbyplugin.interfaces.Debuglevel;
 
 import com.ciryusmedia.challengenetwork.challengeslobbyplugin.interfaces.Texts;
@@ -32,6 +33,8 @@ public final class ChallengesLobbyPlugin extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new PlayerListener(), this);
         getServer().getPluginManager().registerEvents(new PlayerJoinLeaveListener(), this);
+
+        getCommand("spawn").setExecutor(new SpawnCommand());
 
         tablistManager = new TablistManager();
 
