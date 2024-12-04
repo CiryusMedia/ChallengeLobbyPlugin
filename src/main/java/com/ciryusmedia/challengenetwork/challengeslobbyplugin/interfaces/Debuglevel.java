@@ -1,4 +1,4 @@
-package com.ciryusmedia.challengenetwork.challengesLobbyPlugin.interfaces;
+package com.ciryusmedia.challengenetwork.challengeslobbyplugin.interfaces;
 
 import org.bukkit.ChatColor;
 

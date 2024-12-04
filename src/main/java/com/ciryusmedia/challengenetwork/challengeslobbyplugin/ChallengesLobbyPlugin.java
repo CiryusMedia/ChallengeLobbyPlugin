@@ -1,8 +1,9 @@
-package com.ciryusmedia.challengenetwork.challengesLobbyPlugin;
+package com.ciryusmedia.challengenetwork.challengeslobbyplugin;
 
-import com.ciryusmedia.challengenetwork.challengesLobbyPlugin.interfaces.Debuglevel;
+import com.ciryusmedia.challengenetwork.challengeslobbyplugin.interfaces.Debuglevel;
 
-import com.ciryusmedia.challengenetwork.challengesLobbyPlugin.interfaces.Texts;
+import com.ciryusmedia.challengenetwork.challengeslobbyplugin.interfaces.Texts;
+import com.ciryusmedia.challengenetwork.challengeslobbyplugin.scoreboard.TablistManager;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -12,6 +13,8 @@ public final class ChallengesLobbyPlugin extends JavaPlugin {
     public static int debugLevel;
 
     private static ChallengesLobbyPlugin instance;
+
+    private TablistManager tablistManager;
 
     @Override
     public void onLoad() {
@@ -24,6 +27,8 @@ public final class ChallengesLobbyPlugin extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         log("Enabling Ciryus Challenge Plugin version " + getDescription().getVersion(), Debuglevel.LEVEL_0);
+
+        tablistManager = new TablistManager();
 
         log(ChatColor.RESET + Texts.STARTUP_LOGO, Debuglevel.LEVEL_0);
         log("Challenge Plugin Loaded and Enabled", Debuglevel.LEVEL_0);
