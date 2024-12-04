@@ -15,7 +15,7 @@ public interface Texts {
             "                    __/ |                                            \n" +
             "                   |___/                                             \n";
 
-    String PREFIX = ChatColor.AQUA + "Challenges" + ChatColor.DARK_GRAY + "» " + ChatColor.RESET;
+    String PREFIX = ChatColor.AQUA + "Lobby" + ChatColor.DARK_GRAY + "» " + ChatColor.RESET;
 
     String INVALID_ARGUMENTS = ChatColor.RED + "Wrong arguments!";
     String INVALID_CHALLENGE = ChatColor.RED + "This is not a challenge!";
