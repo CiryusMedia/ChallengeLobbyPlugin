@@ -127,7 +127,9 @@ public class SpawnCommand implements CommandExecutor, Texts {
 
 
     private boolean isValidRelativePosition(String string) {
-        boolean isValid = true;
+        if (!string.contains("~")) {
+            return false;
+        }
 
         String p = string.replace("~", "");
 
@@ -135,11 +137,11 @@ public class SpawnCommand implements CommandExecutor, Texts {
             try {
                 Double.parseDouble(p);
             } catch (NumberFormatException e) {
-                isValid = false;
+                return false;
             }
         }
 
-        return isValid;
+        return true;
     }
 
     private double posFromRelPos(String string, double playerPos) throws NumberFormatException {
@@ -155,7 +157,7 @@ public class SpawnCommand implements CommandExecutor, Texts {
 
             return playerPosTrimmed + rel;
         } else {
-            throw new NumberFormatException();
+            return Integer.parseInt(s);
         }
     }
 }
