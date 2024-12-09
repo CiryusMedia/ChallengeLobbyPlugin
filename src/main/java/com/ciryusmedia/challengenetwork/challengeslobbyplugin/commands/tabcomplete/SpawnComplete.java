@@ -18,11 +18,22 @@ public class SpawnComplete implements TabCompleter {
 
         List<String> list = new ArrayList<>();
 
-        if (strings.length == 1) {
-            list.add("set");
-        }
-        if (strings.length == 2) {
-            list.add("~ ~ ~");
+        switch (strings.length) {
+            case 1:
+                list.add("set");
+                break;
+
+            case 2:
+                list.add("~ ~ ~");
+                break;
+
+            case 3:
+                list.add("~ ~");
+                break;
+
+            case 4:
+                list.add("~");
+                break;
         }
 
         if (commandSender instanceof Player player && player.getTargetBlockExact(5) != null) {
