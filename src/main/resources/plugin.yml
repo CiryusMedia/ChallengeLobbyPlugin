@@ -9,6 +9,7 @@ commands:
 
   spawn:
     description: Teleports the player to the spawn or sets the spawn
+    usage: "/<command> [set] <x> <y> <z>"
 
 permissions:
 
